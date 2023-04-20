@@ -1,0 +1,38 @@
+@use 'state';
+@use 'typography';
+@use 'visibility';
+@use 'elevation';
+
+button {
+  @include state.interactive;
+  @include typography.label-l;
+  @include visibility.overflow-hidden;
+  border: 1px solid transparent;
+  background: none;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-radius: var(--md-sys-size-4);
+  color: var(--md-sys-color-primary);
+
+  :host-context(.type-outlined) & {
+    border: 1px solid var(--md-sys-color-surface-emphasis-2);
+  }
+
+  :host-context(.type-filled) & {
+    @include state.interactive-primary;
+    background: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+  }
+
+  :host-context(.type-elevated) & {
+    @include elevation.get(1);
+
+    &[disabled] {
+      @include elevation.get(0);
+    }
+
+    background-color: var(--md-sys-color-surface);
+  }
+}

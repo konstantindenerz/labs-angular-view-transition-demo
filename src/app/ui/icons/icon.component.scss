@@ -1,0 +1,7 @@
+:host {
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  width: var(--icon-size, 1.5rem);
+  height: var(--icon-size, 1.5rem);
+}

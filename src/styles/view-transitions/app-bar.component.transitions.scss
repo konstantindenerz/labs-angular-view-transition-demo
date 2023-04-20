@@ -1,0 +1,69 @@
+::view-transition-old(special) {
+  @media (orientation: portrait) {
+    mask: url("~assets/tail.svg?v1") center top no-repeat,
+    url("~assets/space.svg?v42") center center no-repeat,
+    url("~assets/ncc1701.svg") center center no-repeat;
+    mask-repeat: no-repeat;
+    mask-size: 10rem 20rem, 300% 300%, 100% 30%;
+    animation: hide-view-portrait 2.8s cubic-bezier(0.975, -0.005, 0, 1.02) forwards;
+  }
+
+  @media (orientation: landscape) {
+    mask: url("~assets/tail.svg?v1") center top no-repeat,
+    url("~assets/space-landscape.svg?v4") center center no-repeat,
+    url("~assets/ncc1701.svg") center center no-repeat;
+    mask-repeat: no-repeat;
+    mask-size: 10rem 30rem, 500% 500%, 100% 30%;
+    animation: hide-view-landscape 2.8s cubic-bezier(0.975, -0.005, 0, 1.02) forwards;
+    @media (max-height: 300px) {
+      mask-size: 10rem 10rem, 500% 500%, 100% 30%;
+    }
+  }
+}
+
+
+@keyframes hide-view-portrait {
+  from {
+    mask-position: 50% 120%, 50% 0%, 50% 150%;
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(.95);
+  }
+  50% {
+    mask-position: 50% 120%, 50% 80%, 50% 60%;
+  }
+
+  80% {
+    mask-position: 50% -60%, 50% 140%, 50% -70%;
+  }
+
+  to {
+    mask-position: 50% -60%, 50% 140%, 50% -70%;
+    transform: scale(1);
+  }
+}
+
+@keyframes hide-view-landscape {
+  from {
+    mask-position: 50% 120%, 50% 0%, 50% 150%;
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1) translateY(-5%);
+  }
+  50% {
+    mask-position: 50% 120%, 50% 72%, 50% 60%;
+  }
+
+  80% {
+    mask-position: 50% -80%, 50% 140%, 50% -70%;
+  }
+
+  to {
+    mask-position: 50% -80%, 50% 140%, 50% -70%;
+    transform: scale(1) translateY(-10%);
+  }
+}

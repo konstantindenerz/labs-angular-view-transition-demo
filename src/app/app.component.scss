@@ -1,0 +1,15 @@
+.links {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+}

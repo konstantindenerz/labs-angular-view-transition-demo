@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="left">
+    <div class="top">
+      <labs-icon-button [icon]="back" (click)="navigateBack()"></labs-icon-button>
+      <div class="title">{{project?.title}}</div>
+    </div>
+    <a class="author" href="https://codepen.io/konstantindenerz">Konstantin Denerz</a>
+  </div>
+  <div class="right">
+    <labs-icon-button [icon]="save" type="primary"></labs-icon-button>
+    <labs-icon-button [icon]="cog" type="primary"></labs-icon-button>
+    <labs-icon-button [icon]="more"></labs-icon-button>
+  </div>
+</div>
+<div class="editor">
+  <div class="code">
+    <div class="left">HTML</div>
+    <div class="center">SCSS</div>
+    <div class="right">JS</div>
+  </div>
+  <div class="preview">
+    <labs-project-preview [id]="id"></labs-project-preview>
+  </div>
+</div>

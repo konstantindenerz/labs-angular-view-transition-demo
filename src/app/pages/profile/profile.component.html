@@ -1,0 +1,34 @@
+<div class="cover">
+  <labs-project-preview id="NWLbagY"></labs-project-preview>
+</div>
+<div class="about">
+  <div class="name">
+    <div>Konstantin Denerz</div>
+  </div>
+  <div class="links">
+    <a href="https://twitter.com/kdenerz" aria-label="Link to Konstantin Denerz's Twitter Profile">
+      <img src="../../../assets/twitter-kdenerz.svg">
+    </a>
+  </div>
+  <div class="avatar"><img src="../../../assets/kode.jpg"></div>
+  <div class="social">
+    <div class="number">42</div>
+    <div class="text">Followers</div>
+    <div class="number">42</div>
+    <div class="text">Following</div>
+  </div>
+  <div class="description">npx konstantindenerz ✨ Consultant - Coach - CSS Wizard 🧙‍♂️ - tej - Angular - UX-UI -
+    Material
+  </div>
+</div>
+<div class="tabs-mock">
+  <div class="tab-group">
+    <div class="tab active">Showcase</div>
+    <div class="tab">Popular</div>
+    <div class="tab">Liked</div>
+  </div>
+</div>
+<div class="grid">
+  <labs-project-card *ngFor="let project of projects; first as isFirst" [project]="project" [isFirst]="isFirst">
+  </labs-project-card>
+</div>

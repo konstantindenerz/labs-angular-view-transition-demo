@@ -1,0 +1,51 @@
+$bp-xs: '(max-width: 599px)';
+$bp-s: '(min-width:600px) and (max-width: 1023px)';
+$bp-m: '(min-width:1024px) and (max-width: 1439px)';
+$bp-l: '(min-width:1440px) and (max-width: 1919px)';
+$bp-xl: '(min-width:1920px)';
+
+$breakpoints: (
+  xs: $bp-xs,
+  s: $bp-s,
+  m: $bp-m,
+  l: $bp-l,
+  xl: $bp-xl,
+);
+
+@mixin xs {
+  @media #{$bp-xs} {
+    @content;
+  }
+}
+
+@mixin s {
+  @media #{$bp-s} {
+    @content;
+  }
+}
+
+@mixin m {
+  @media #{$bp-m} {
+    @content;
+  }
+}
+
+@mixin l {
+  @media #{$bp-l} {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media #{$bp-xl} {
+    @content;
+  }
+}
+
+@mixin use($keys...) {
+  @each $key in $keys {
+    @media #{map-get($breakpoints, $key)} {
+      @content;
+    }
+  }
+}

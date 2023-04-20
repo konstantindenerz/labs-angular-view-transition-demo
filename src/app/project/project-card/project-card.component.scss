@@ -1,0 +1,86 @@
+@use '../../../styles/mixins/typography';
+@use '../../../styles/mixins/breakpoints';
+@use '../../../styles/mixins/elevation';
+@use '../../../styles/mixins/state';
+
+
+.stats {
+  display: flex;
+  gap: var(--md-sys-size-2);
+  padding: var(--md-sys-size-1) var(--md-sys-size-2);
+}
+
+.labs-button-mock {
+  @include state.interactive;
+  display: flex;
+  gap: var(--md-sys-size-1);
+  border-radius: var(--md-sys-size-1);
+
+  labs-icon {
+    transform: scale(.7) translateY(-.15rem);
+    transform-origin: center;
+  }
+
+  padding: var(--md-sys-size-1);
+}
+
+:host {
+  @include elevation.get(4, false);
+  display: flex;
+  flex-direction: column;
+  background: var(--md-sys-color-surface);
+  border-radius: .75rem;
+  overflow: hidden;
+  background-size: cover;
+
+  .preview {
+    overflow: hidden;
+    border-radius: inherit;
+    display: flex;
+    height: 100%;
+  }
+
+  .title {
+    @include typography.title-s;
+    padding: var(--md-sys-size-4);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1 0 auto;
+  }
+
+  &.first {
+    grid-column: 1 / 4;
+
+    .title {
+      @include typography.title-l;
+    }
+  }
+
+
+  img, video, iframe {
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  @include breakpoints.use(s) {
+    &.first {
+      grid-column: 1/3;
+    }
+  }
+  @include breakpoints.use(xs) {
+    &.first {
+      grid-column: 1/2;
+    }
+  }
+
+  &.active {
+    .preview {
+      labs-project-preview {
+        view-transition-name: project-preview;
+        contain: layout;
+      }
+    }
+  }
+}

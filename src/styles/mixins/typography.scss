@@ -1,0 +1,77 @@
+@mixin display-l {
+  font: 400 3.5625rem / 4rem var(--md-sys-font-family);
+  letter-spacing: 0;
+}
+
+@mixin display-m {
+  font-size: 2.8125rem;
+  line-height:  3.25rem;
+  font-weight: 400;
+  font-family: var(--md-sys-font-family);
+  letter-spacing: 0;
+}
+
+@mixin display-s {
+  font: 400 2.25rem / 2.75rem var(--md-sys-font-family);
+  letter-spacing: 0;
+}
+
+@mixin headline-l {
+  font: 400 2rem / 2.5rem var(--md-sys-font-family);
+  letter-spacing: 0;
+}
+
+@mixin headline-m {
+  font: 400 1.75rem / 2.25rem var(--md-sys-font-family);
+  letter-spacing: 0;
+}
+
+@mixin headline-s {
+  font: 400 1.5rem / 2rem var(--md-sys-font-family);
+  letter-spacing: 0;
+}
+
+@mixin title-l {
+  font: 400 1.375rem / 1.75rem var(--md-sys-font-family);
+  letter-spacing: 0;
+}
+
+@mixin title-m {
+  font: 500 1rem / 1.5rem var(--md-sys-font-family);
+  letter-spacing: 0.009375rem;
+}
+
+@mixin title-s {
+  font: 500 0.875rem / 1.25rem var(--md-sys-font-family);
+  letter-spacing: 0.00625rem;
+}
+
+@mixin label-l {
+  font: 500 0.875rem / 1.25rem var(--md-sys-font-family);
+  letter-spacing: 0.00625rem;
+}
+
+@mixin label-m {
+  font: 500 0.75rem / 1rem var(--md-sys-font-family);
+  letter-spacing: 0.03125rem;
+}
+
+@mixin label-s {
+  font: 500 0.6875rem / 1rem var(--md-sys-font-family);
+  letter-spacing: 0.03125rem;
+}
+
+@mixin body-l {
+  font: 1rem / 1.5rem var(--md-sys-font-family);
+  letter-spacing: 0.009375rem;
+}
+
+@mixin body-m {
+  font: 0.875rem / 1.25rem var(--md-sys-font-family);
+  letter-spacing: 0.015625rem;
+}
+
+@mixin body-s {
+  font: 0.75rem / 1rem var(--md-sys-font-family);
+  letter-spacing: 0.025rem;
+}

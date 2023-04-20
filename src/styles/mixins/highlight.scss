@@ -1,0 +1,5 @@
+@use 'overlay';
+
+@mixin create($alpha: 0) {
+  @include overlay.create($alpha, 1, false);
+}

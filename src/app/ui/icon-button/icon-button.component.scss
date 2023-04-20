@@ -1,0 +1,30 @@
+@use 'visibility';
+@use 'state';
+
+.hidden {
+  @include visibility.hidden;
+}
+
+fa-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+:host {
+  @include state.interactive-circle;
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+
+  &.primary {
+    color: var(--md-sys-color-primary)
+  }
+
+  &.outlined {
+    border: var(--md-sys-size-0) solid currentColor;
+  }
+}

@@ -1,0 +1,13 @@
+::view-transition-new(code) {
+  animation: slide-from-top .7s linear;
+}
+
+@keyframes slide-from-top {
+  from {
+    clip-path: circle(0 at 50% 10%);
+  }
+
+  to {
+    clip-path: circle(100vmax at 50% 10%);
+  }
+}

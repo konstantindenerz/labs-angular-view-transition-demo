@@ -1,0 +1,107 @@
+@use 'typography';
+@use 'breakpoints';
+@use 'elevation';
+@use 'state';
+
+.center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.labs-button {
+  @include state.interactive-circle;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: var(--md-sys-size-4);
+  @include breakpoints.use(xs, s) {
+    gap: var(--md-sys-size-2);
+  }
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--md-sys-size-4);
+  @include breakpoints.use(xs, s) {
+    gap: var(--md-sys-size-2);
+  }
+}
+
+.search-field-mock {
+  @include elevation.get(6, false);
+  min-width: 16rem;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: auto 1fr auto;
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface-variant);
+  border-radius: 2rem;
+  padding: var(--md-sys-size-1) var(--md-sys-size-2);
+
+  .query {
+    @include typography.label-l;
+  }
+
+  .avatar {
+    display: grid;
+    place-items: center;
+
+    img {
+      height: 2rem;
+      border-radius: var(--md-sys-size-3);
+      object-fit: contain;
+      border: .0625rem solid var(--md-sys-color-outline);
+    }
+  }
+
+  @include breakpoints.use(xs, s) {
+    display: flex;
+    justify-content: flex-end;
+    background: unset;
+    --md-sys-color-highlight: transparent;
+    min-width: unset;
+    .query, labs-icon {
+      display: none;
+    }
+  }
+}
+
+:host {
+  @include elevation.get(3, false);
+  box-shadow: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  padding: var(--md-sys-size-1) var(--md-sys-size-2);
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10000; // TODO z-index
+  margin: 0 1rem;
+  border-bottom-left-radius: var(--md-sys-size-5);
+  border-bottom-right-radius: var(--md-sys-size-5);
+  view-transition-name: app-bar;
+  contain: layout;
+
+  &:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    height: .1rem;
+    background: linear-gradient(to right, #5FBDF2, #F7DB64, #A467DC, #72C97F); // TODO create brand variables
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  }
+}

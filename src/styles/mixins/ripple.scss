@@ -1,0 +1,36 @@
+.labs-ripple {
+  position: relative;
+
+  &:not(.labs-ripple-center) {
+    overflow: hidden;
+  }
+}
+
+.labs-ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background-color: currentColor;
+  pointer-events: none;
+  z-index: 111111;
+
+  &.labs-ripple-active {
+    animation-name: labs-ripple;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
+}
+
+@keyframes labs-ripple {
+  from {
+    transform: scale(0.01);
+    opacity: .4;
+  }
+  60% {
+    opacity: var(--md-sys-state-pressed-alpha);
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+  }
+}

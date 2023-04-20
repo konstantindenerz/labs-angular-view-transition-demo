@@ -1,0 +1,52 @@
+<div class="header">
+  <div class="left">
+    <div class="top">
+      <labs-icon-button [icon]="back" (click)="navigateBack()" class="back-button"></labs-icon-button>
+      <div class="title">
+        {{project?.title}}
+      </div>
+    </div>
+    <a class="author" href="https://codepen.io/konstantindenerz">Konstantin Denerz</a>
+  </div>
+  <div class="right">
+    <labs-icon-button [icon]="heart" type="primary"></labs-icon-button>
+    <labs-button type="outlined" (click)="navigate()">View in Editor</labs-button>
+    <labs-icon-button [icon]="more"></labs-icon-button>
+  </div>
+  <div class="bottom">
+    <div class="tab-group-mock">
+      <div class="tab">HTML</div>
+      <div class="tab">SCSS</div>
+      <div class="tab">JS</div>
+      <div class="tab active">
+        <labs-icon [icon]="check"></labs-icon>
+        RESULT
+      </div>
+    </div>
+  </div>
+</div>
+<div class="preview">
+  <labs-project-preview [id]="$any((activatedRoute.params | async)).id"></labs-project-preview>
+</div>
+<div class="content">
+  <div class="separator">
+    <div class="grip"></div>
+  </div>
+  <div class="toolbar">
+    <div class="left">
+      <labs-button type="outlined">Resources</labs-button>
+    </div>
+    <div class="right">
+      <div class="labs-slider-mock"></div>
+      <labs-icon-button [icon]="play" type="primary"></labs-icon-button>
+    </div>
+  </div>
+  <div class="details">
+    <div class="left">
+      <div class="description">
+        Description of the project made with ❤️.
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>

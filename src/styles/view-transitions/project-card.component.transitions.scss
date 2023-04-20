@@ -1,0 +1,9 @@
+::view-transition-old(project-preview) {
+  display: none;
+}
+
+
+::view-transition-new(project-preview) {
+  animation: none;
+  z-index: 111111;
+}

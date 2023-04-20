@@ -36,6 +36,9 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles/mixins"]
+            },
             "styles": [
               "src/styles.scss"
             ],
@@ -106,6 +109,11 @@
           }
         }
       }
+    }
+  },
+  "cli": {
+    "cache": {
+      "enabled": false
     }
   }
 }

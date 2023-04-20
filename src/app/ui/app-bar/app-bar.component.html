@@ -1,0 +1,23 @@
+<div class="left">
+  <labs-icon-button [icon]="bars"></labs-icon-button>
+  <labs-icon-button [icon]="add" type="primary"></labs-icon-button>
+</div>
+<div class="center" (click)="nav(['/'])">
+  <div class="labs-button" labsRipple>
+    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="25" viewBox="0 0 15 25">
+      <path
+        d="M17.5-5A2.5,2.5,0,0,1,15-7.5,2.5,2.5,0,0,1,17.5-10,2.5,2.5,0,0,1,20-7.5,2.5,2.5,0,0,1,17.5-5Zm0,5A7.5,7.5,0,0,0,25-7.5,7.5,7.5,0,0,0,17.5-15,7.5,7.5,0,0,0,10-7.5,7.5,7.5,0,0,0,17.5,0Zm1.25-7.5A1.249,1.249,0,0,0,17.5-8.75,1.249,1.249,0,0,0,16.25-7.5,1.249,1.249,0,0,0,17.5-6.25,1.249,1.249,0,0,0,18.75-7.5ZM7.379-9.477,5.352-11.25H8.125a1.249,1.249,0,0,0,1.25-1.25,1.249,1.249,0,0,0-1.25-1.25H1.25A1.249,1.249,0,0,0,0-12.5a1.249,1.249,0,0,0,1.25,1.25H2.5L5.063-9.012,4.977-9A1.526,1.526,0,0,0,3.75-7.5,1.526,1.526,0,0,0,4.977-6l.086.016L2.5-3.75H1.25A1.249,1.249,0,0,0,0-2.5,1.249,1.249,0,0,0,1.25-1.25H8.125A1.249,1.249,0,0,0,9.375-2.5a1.249,1.249,0,0,0-1.25-1.25H5.352L7.379-5.523l1.68.336A8.694,8.694,0,0,1,8.75-7.5a8.694,8.694,0,0,1,.309-2.312Z"
+        transform="translate(15 25) rotate(-90)" fill="currentColor"/>
+    </svg>
+  </div>
+</div>
+<div class="right">
+  <div class="search-field-mock">
+    <labs-icon [icon]="search"></labs-icon>
+    <div class="query">Konstantin Denerz</div>
+    <div class="avatar">
+      <img src="../../../assets/kode.jpg" alt="Konstantin Denerz">
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,63 @@
+::view-transition-old(detail-page) {
+  animation: close-to-top-left-corner var(--view-transition-duration) ease;
+}
+
+@keyframes close-to-top-left-corner {
+  from {
+    clip-path: ellipse(100vmax 100vmax at center);
+  }
+
+  to {
+    clip-path: ellipse(.1rem .1rem at 2.2rem 5rem);
+  }
+}
+
+::view-transition-new(detail-content):only-child {
+  animation: from-bottom-to-top var(--view-transition-duration) ease;
+}
+
+::view-transition-old(detail-content):only-child {
+  animation: from-top-to-bottom var(--view-transition-duration) ease;
+}
+
+@keyframes from-top-to-bottom {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes from-bottom-to-top {
+  from {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+::view-transition-new(back-button):only-child {
+  animation: slide-in-from-left var(--view-transition-duration) ease;
+}
+
+::view-transition-new(author):only-child {
+  animation: slide-in-from-left var(--view-transition-duration) ease;
+}
+
+@keyframes slide-in-from-left {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
