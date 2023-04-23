@@ -133,14 +133,14 @@ labs-project-preview {
 
   body.special & {
     view-transition-name: special;
-    contain: layout;
+
   }
 
   body:not(.special) & {
     &:not(.full-page-transition) {
       .code {
         view-transition-name: code;
-        contain: layout;
+
       }
 
       .left {
@@ -148,24 +148,24 @@ labs-project-preview {
           labs-icon-button {
             z-index: 1;
             view-transition-name: back-button;
-            contain: layout;
+
           }
         }
       }
 
       .author {
         view-transition-name: author;
-        contain: layout;
+
       }
 
       .title {
         view-transition-name: project-title;
-        contain: layout;
+
       }
 
       labs-project-preview {
-        view-transition-name: project-preview;
-        contain: layout;
+        view-transition-name: preview;
+
       }
     }
   }

@@ -8,12 +8,12 @@ import {DataService} from '../../shared/data-service';
 import {RippleDirective} from '../../ui/ripple/ripple.directive';
 
 @Component({
-  selector: 'labs-profile',
+  selector: 'labs-list',
   standalone: true,
   imports: [CommonModule, RouterLinkActive, RippleDirective, ProjectCardComponent, ProjectPreviewComponent],
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss'],
+  templateUrl: './list.component.html',
+  styleUrls: ['./list.component.scss'],
 })
-export class ProfileComponent {
+export class ListComponent {
   projects: Project[] = inject(DataService).data;
 }

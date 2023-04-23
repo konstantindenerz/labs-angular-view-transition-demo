@@ -44,11 +44,12 @@
   }
 }
 
-::view-transition-new(back-button):only-child {
+::view-transition-new(author):only-child {
   animation: slide-in-from-left var(--view-transition-duration) ease;
 }
 
-::view-transition-new(author):only-child {
+
+::view-transition-new(back-button):only-child {
   animation: slide-in-from-left var(--view-transition-duration) ease;
 }
 

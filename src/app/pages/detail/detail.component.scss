@@ -203,45 +203,38 @@ labs-project-preview {
 
   .special & {
     view-transition-name: special;
-    contain: layout;
   }
 
   &.full-page-transition {
     view-transition-name: detail-page;
-    contain: layout;
   }
 
   body:not(.special) & {
     &:not(.full-page-transition) {
       .preview {
         labs-project-preview {
-          view-transition-name: project-preview;
-          contain: layout;
+          view-transition-name: preview;
         }
       }
 
       .content {
         view-transition-name: detail-content;
-        contain: layout;
       }
 
       .left {
         .top {
           labs-icon-button {
             view-transition-name: back-button;
-            contain: layout;
           }
         }
       }
 
       .author {
         view-transition-name: author;
-        contain: layout;
       }
 
       .title {
         view-transition-name: project-title;
-        contain: layout;
       }
     }
   }

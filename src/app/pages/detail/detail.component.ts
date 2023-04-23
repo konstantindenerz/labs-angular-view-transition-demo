@@ -1,5 +1,5 @@
 import {CommonModule} from '@angular/common';
-import {Component, ElementRef, inject, Input, NgZone, OnInit} from '@angular/core';
+import {Component, ElementRef, inject, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {faHeart} from '@fortawesome/free-solid-svg-icons';
 import {faCheck} from '@fortawesome/free-solid-svg-icons/faCheck';
@@ -28,11 +28,11 @@ export class DetailComponent implements OnInit {
   play = faPlay;
   private readonly router = inject(Router);
   public readonly activatedRoute = inject(ActivatedRoute);
-  private readonly ngZone = inject(NgZone);
   private readonly elementRef = inject(ElementRef);
   private readonly dataService = inject(DataService);
   public project?: Project;
   @Input() id = '';
+
   navigate() {
     void this.router.navigateByUrl(`/konstantindenerz/editor/${this.id}`);
   }

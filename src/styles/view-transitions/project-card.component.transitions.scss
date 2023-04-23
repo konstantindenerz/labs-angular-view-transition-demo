@@ -1,9 +1,9 @@
-::view-transition-old(project-preview) {
+::view-transition-old(preview) {
   display: none;
 }
 
 
-::view-transition-new(project-preview) {
+::view-transition-new(preview) {
   animation: none;
-  z-index: 111111;
+  z-index: var(--index-preview);
 }

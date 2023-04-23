@@ -29,6 +29,5 @@ export class ProjectCardComponent {
   async nav(segments: string[]): Promise<void> {
     this.elementRef.nativeElement.classList.add('active');
     await this.router.navigate(segments);
-    this.elementRef.nativeElement.classList.add('active');
   }
 }

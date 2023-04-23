@@ -78,8 +78,7 @@
   &.active {
     .preview {
       labs-project-preview {
-        view-transition-name: project-preview;
-        contain: layout;
+        view-transition-name: preview;
       }
     }
   }
